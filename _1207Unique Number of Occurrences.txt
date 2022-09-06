@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool uniqueOccurrences(vector<int>& arr) {
+// creating map 
+       unordered_map<int,int> um;
+       set<int> occurance;  
+// adding all eleemnts of array in map 
+        for(auto &i :arr){
+             um[i]++;
+        }
+//adding values of occurance of elements in set        
+        for(auto n:um){
+            if(occurance.count(n.second))  //if the n.second same value appears in the occurance set then it will retrun false coz every element should occur unique times
+                return false;
+            occurance.insert(n.second);
+        }
+        return true;
+        
+        
+    }
+};

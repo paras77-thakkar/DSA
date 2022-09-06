@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        int i;
+        int ans=0;
+        // i<=30 coz we are checking till the range of integer 2^31
+        for(i=0;i<=30; i++){
+            ans=pow(2,i);
+            if(ans==n){
+                return true;
+                break;
+            } 
+        }
+            return false;
+    }
+};
