@@ -15,7 +15,7 @@ class heap{
         int index=size;
         arr[index]=val;
 
-        if(index>1){
+        while(index>1){
             int parent=index/2;
             if(arr[parent]<arr[index]){
                 swap(arr[parent],arr[index]);
@@ -34,9 +34,10 @@ class heap{
 };
 int main(){
  heap h;
- h.insert(10);
- h.insert(20);
- h.insert(5);
- h.insert(2);
+ h.insert(98);
+ h.insert(97);
+ h.insert(95);
+ h.insert(100);
+ h.insert(90);
  h.print();
 }
